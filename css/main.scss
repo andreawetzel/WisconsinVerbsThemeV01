@@ -1,0 +1,80 @@
+
+
+//Base Variables__________________________________//
+$base-font-size: 1.5em;
+$base-line-height: 1.5em;
+$base-margin-bottom: .5em;
+
+//Color Variables__________________________________//
+$color-link: #458599;
+$color-link-bg: #EAEAEA;
+$color-base-text: #333;
+$color-best-grey: #EAEAEA;
+$color-dark-grey: #333;
+$color-primary: #458599;
+//$color-secondary: #FF6C00;
+$color-secondary: #CC0000;
+$color-red: #CC0000;
+$color-light-link: #FFF;
+
+//Grid Variables__________________________________//
+$grid-xsmall-max: 'max-width: 767px';
+$grid-small: 'min-width: 768px';
+$grid-small-max: 'max-width: 991px';
+$grid-medium: 'min-width: 992px';
+$grid-medium-max: 'max-width: 1199px';
+$grid-large: 'min-width: 1200px';
+$grid-large-container: 1200px;
+$grid-medium-container: 992px;
+$grid-padding: 20px;
+
+
+//Font Variables__________________________________//
+$font-sans: "open-sans", "Arial", sans-serif;
+$font-serif: "chaparral-pro", "Times New Roman", serif;
+
+
+//Mixins__________________________________//
+
+//Background colors for classes with color variable names
+@mixin bg_color($color-name, $color) {
+    .#{$color-name }{ background: $color;
+        @if (lightness($color) < 60)
+            { color: $color-light-link;} else {
+                color: $color-base-text;}
+        }
+}
+
+@mixin btn_color ($btn-name, $color) {
+    .#{$btn-name }{ background: $color;
+        border: solid darken($color, 10%);
+        border-width: 1px 1px 3px 1px;
+        border-width: 1px 1px 3px 1px;
+
+        @if (lightness($color) > 60)
+            { color: $color-base-text;} else {
+                color: $color-light-link;}
+        }
+}
+
+//Box Colors__________________________________//
+
+@include bg_color(color-secondary, $color-secondary);
+@include bg_color(color-primary, $color-primary);
+@include bg_color(color-best-grey, $color-best-grey);
+@include bg_color(color-dark-grey, $color-dark-grey);
+@include bg_color(color-red, $color-red);
+@include bg_color(color-light-link, $color-light-link);
+
+
+//Imports__________________________________//
+
+@import "_reset.scss";
+@import "_bootstrap-grid.scss";
+@import "_nav.scss";
+@import "_typography.scss";
+@import "_gallery.scss";
+@import "_general.scss";
+@import "_sidebar.scss";
+@import "_footer.scss";
+@import "_accessibility-print.scss"

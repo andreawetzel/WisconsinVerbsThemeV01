@@ -1,0 +1,86 @@
+//Top Navigation
+.site-top {
+    margin-bottom: 1em;
+}
+.site-logo { 
+	float: left; 
+	margin-top: 20px;
+    display: block;
+}
+.site-logo a {
+    border-bottom: 0;
+    &:hover {
+        background-color: #FFF;
+    }
+}
+
+
+#menu {
+	display: block;
+	text-align: center;
+	float: right;
+	min-height: 40px;
+	cursor: pointer;
+    padding: 1em 0 0 0;
+}
+#nav.js { display: none; }
+.site-nav {
+	line-height: 1em;
+	letter-spacing: 1px;
+	padding: 20px 0;
+}
+.site-nav ul {
+	list-style: none;
+	margin: 0;
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+	display: none;
+    clear: both;
+}
+.site-nav li { width: 100%; }
+
+.site-nav li a {
+color: $color-primary;
+	padding: 20px;
+	display: block;
+    border-bottom: 0;
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-light-link;   
+    }
+}
+
+@media (min-width:600px) {
+    .site-nav {
+        clear: none;
+        float: right;
+        height: 80px;
+        padding: 50px 1px 1px 1px;
+    }
+    .site-nav li a {
+        padding: 10px;
+        display: inline;
+        width: 100%;
+    }
+    .site-nav ul {
+        list-style: none;
+        margin: 0;
+        display: inline;
+        padding: 0;
+    }
+    .site-nav li {
+        display: inline-block;
+        float: left;
+        padding: 0 .15em;
+    }
+    #menu { 
+        display: none; 
+    }
+    #nav.js { 
+        display: block; 
+    }
+    .site-nav li { 
+        width: auto; 
+    }
+}

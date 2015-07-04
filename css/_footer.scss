@@ -1,0 +1,18 @@
+//Site Footer
+
+.site-footer {
+    letter-spacing: 1px;
+    background-color: #333;
+    min-height: 150px;
+    padding-top: 1em;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+.site-footer a {
+    color: $color-light-link;
+    border-bottom: none;
+}
+.site-footer a:hover {
+    background-color: rgba(0,0,0,0);
+}

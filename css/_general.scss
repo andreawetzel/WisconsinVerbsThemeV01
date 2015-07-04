@@ -1,0 +1,77 @@
+//Page Styles__________________________________//
+.grid-box {
+    height: 100px;
+    font-size: .8em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 1em;
+}
+
+//Featured Image
+.attachment-post-thumbnail {
+    margin: 0 0 1em 0;
+}
+
+//Page and Post misc styles
+.blog-post, .add-btm-margin {
+    margin-bottom: 4em;
+}
+.story-link-title {
+    margin: 1em 0;
+    font-size: .8em;
+    line-height: 1.1em;
+}
+.wp-caption-text {
+    font-style: italic;
+    color: lighten($color-dark-grey, 30%);
+    font-size: .8em;
+    padding-top: .2em;
+    line-height: 1.1em;
+}
+.more-link {
+    border-bottom: 0;
+}
+.blog-post-single h1 {
+    font-size: 2em;
+    line-height: 1.1em;
+    text-transform: none;
+}
+
+//Previous and Next Post Links & Images
+.previous-post-link a, .next-post-link a {
+    text-decoration: none;
+    border-bottom: 0;
+}
+.previous-next-container:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.previous-next-container {
+    margin-bottom: 1em;
+}
+
+//Post and excerpt footer
+.blog-post-date {
+    font-style: italic;
+    color: lighten($color-dark-grey, 50%);
+    font-size: .8em;
+    margin: 0 0 2em 0;
+}
+.blog-post-date a {
+    color: lighten($color-primary, 20%);
+    border-bottom: 1px solid lighten($color-primary, 20%);
+}
+
+//Pages Titles
+.title-bg {
+    color: $color-light-link;
+    padding: 2em 1em;
+    background-color: $color-primary;
+}
+.hero-title-bg h1{
+    margin-bottom: 0;
+}
+.page-content {
+    padding-top: 1em;
+}

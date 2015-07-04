@@ -1,0 +1,211 @@
+// Typography  Base
+
+
+
+b, strong {
+    font-weight:700;
+}
+dfn, cite, em, i {
+    font-style:italic;
+}
+blockquote {
+    margin:0 1.5em;
+}
+
+sup, sub {
+    font-size:75%;
+    height:0;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline;
+}
+sup {
+    bottom:1ex;
+}
+sub {
+    top:.5ex;
+}
+small {
+    font-size:75%;
+}
+big {
+    font-size:125%;
+}
+
+
+html {
+    color: $color-base-text;
+}
+body {
+    font-family: $font-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+p {
+    margin: 0 auto ($base-margin-bottom *2);
+}
+em {
+    font-style: italic;
+}
+ul{
+    margin-bottom: 1.75em;
+}
+
+hr {
+    clear:both;
+    background-color:#ccc;
+    border:0;
+    height:1px;
+    margin-bottom:1.5em;
+}
+ul, ol {
+     margin:0 0 1.5em .5em;
+        @media ($grid-medium) {
+        margin:0 0 1.5em 3em;
+        }
+}
+ul {
+    list-style:disc;
+}
+ol {
+    list-style:decimal;
+}
+li > ul, li > ol {
+    margin-bottom:0;
+    margin-left: 1em;
+    @media ($grid-medium) {
+        margin-left:1.5em;
+    }
+
+}
+dt {
+    font-weight:700;
+}
+dd {
+    margin:0 1.5em 1.5em;
+}
+img {
+    height:auto;
+    max-width:100%;
+}
+figure {
+    margin:0;
+}
+embed,
+iframe,
+object {
+    max-width:100%;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-sans;
+    font-weight: 700;
+    margin-bottom: $base-margin-bottom;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+    border-bottom: 0;
+    color: $color-primary;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: $base-font-size * .85;
+    @media ($grid-small) {
+        font-size: $base-font-size * 1.8;
+        line-height: $base-line-height*.6;
+    }
+}
+h2 {
+    font-size: $base-font-size * .80;
+    @media ($grid-small) {
+        font-size: $base-font-size * 1.2;
+        line-height: $base-line-height*.7;
+    }
+}
+h3 {
+    font-size: $base-font-size * .75;
+    @media ($grid-small) {
+        font-size: $base-font-size * .8;
+        line-height: $base-line-height * .9;
+    }
+}
+h4 {
+    font-size: $base-font-size * .6;
+    line-height: $base-line-height*.8;
+}
+h5 {
+    font-size: $base-font-size;
+    line-height: $base-line-height*.8;
+}
+a {
+    color: $color-link;
+    text-decoration: none;
+    border-bottom: 1px solid $color-link;
+    transition: .5s;
+    &:hover, &:focus, &:active {
+        color: darken($color-link, 20%);
+        border-bottom: 1px solid darken($color-link, 20%);
+        background-color: $color-link-bg;
+        border-bottom: 0px solid $color-light-link;
+    }
+}
+
+blockquote {
+    padding:.5em;
+    margin:1em 0;
+    border:.06em solid rgba(0,0,0,.1);
+    background-color:$color-best-grey;
+    box-shadow:inset 0 0 .12em rgba(0,0,0,.1);
+    font-style:italic;
+    @media ($grid-medium) {
+        padding:2em 2em 1.6em;
+        font-size:1.2em;
+    }
+}
+blockquote p {
+    margin-bottom:1.25em;
+}
+cite {
+    font-size:.8em;
+    font-style:italic;
+    margin-top:0.25em;
+    display:block;
+}
+
+table {
+    border:1px solid #CCC;
+    border-spacing:0;
+    border-collapse:collapse;
+}
+/* Fancy Tables*/
+.table {
+    width:100%;
+    max-width:100%;
+    margin-bottom:20px;
+}
+.table-responsive {
+    min-height:.01%;
+    overflow-x:auto;
+}
+tr {
+    display:table-row;
+    vertical-align:inherit;
+    border-color:inherit;
+}
+th {
+    text-align:left;
+    font-weight:700;
+    vertical-align:bottom;
+    border-bottom:2px solid #ddd;
+}
+th, td {
+    border:1px solid #ddd;
+    padding:8px;
+}
+hr {
+    border:0;
+    height:0;
+    border-top:1px solid rgb(247, 245, 228);
+    border-top:1px solid rgba(247, 245, 228, 0.9);
+    border-bottom:1px solid rgba(247, 245, 228, 0.4);
+}

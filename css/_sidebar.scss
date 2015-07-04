@@ -1,0 +1,45 @@
+//Right Asides__________________________________//
+.sidebar {
+    text-align: center;
+    background-color: $color-best-grey;
+    padding: 1.5em 0;
+    font-size: .8em;
+    line-height: 1.3;
+    margin-bottom: 2em;
+    @media ($grid-medium) {
+    text-align: left;
+    padding: 1.5em 1em;
+    }
+}
+.sidebar ul {
+    display: block;
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid #fff;
+}
+.sidebar ul li {
+    border-bottom: 1px solid #fff;
+}
+.sidebar ul li a {
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding: .5em .25em;
+    &:hover {
+        background-color: $color-secondary;
+        color: $color-light-link;
+    }
+}
+.sidebar h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+.sidebar h3 a {
+    color: $color-dark-grey;
+}
+.side-widget-1 {
+    padding: 1em 0;
+}
