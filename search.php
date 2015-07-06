@@ -18,7 +18,7 @@
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
                 <?php }  ?>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
-                <?php the_excerpt(); ?> <!--Used in place of the_excerpt-->
+                <?php the_excerpt(); ?> 
                 <div class="blog-post-date"> <p>
                     <a href="<?php the_permalink(); ?>">Continue reading</a><br><?php the_author(); ?>  &ndash; <?php the_time('F j, Y'); ?></p>
                 </div>
