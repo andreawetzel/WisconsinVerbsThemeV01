@@ -40,7 +40,7 @@ $font-serif: "chaparral-pro", "Times New Roman", serif;
 @mixin bg_color($color-name, $color) {
     .#{$color-name }{ background: $color;
         @if (lightness($color) < 60)
-            { color: $color-light-link;} else {
+            { color: $color-light-link;} @else {
                 color: $color-base-text;}
         }
 }
@@ -52,7 +52,7 @@ $font-serif: "chaparral-pro", "Times New Roman", serif;
         border-width: 1px 1px 3px 1px;
 
         @if (lightness($color) > 60)
-            { color: $color-base-text;} else {
+            { color: $color-base-text;} @else {
                 color: $color-light-link;}
         }
 }
