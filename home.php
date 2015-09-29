@@ -15,7 +15,7 @@
             <?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
             <article <?php post_class('blog-post') ?> >
                 <?php if ( has_post_thumbnail() ) { ?>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
                 <?php }  ?>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
                 <?php if(is_single()): ?>
