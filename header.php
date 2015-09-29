@@ -27,7 +27,7 @@
 <header class="container site-top">
 	<div class="row">
 		<div class="col-xs-12">
-            <div class="site-logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/lola-cap-black-sm.png" alt="Wisconsin Verbs" title="Wisconsin Verbs"></a></div>
+            <div class="site-logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/lola-cap-black.svg" alt="Wisconsin Verbs" title="Wisconsin Verbs"></a></div>
 <?php wp_nav_menu( array('menu' => 'Top Custom', 'container_class' => 'site-nav', 'menu_id' => 'nav' )); ?>
 		</div>
 	</div>

@@ -38,23 +38,23 @@ $font-serif: "chaparral-pro", "Times New Roman", serif;
 
 //Background colors for classes with color variable names
 @mixin bg_color($color-name, $color) {
-    .#{$color-name }{ background: $color;
-        @if (lightness($color) < 60)
-            { color: $color-light-link;} @else {
-                color: $color-base-text;}
-        }
+.#{$color-name }{ background: $color;
+    @if (lightness($color) < 60)
+        { color: $color-light-link;} @else {
+            color: $color-base-text;}
+    }
 }
 
 @mixin btn_color ($btn-name, $color) {
-    .#{$btn-name }{ background: $color;
-        border: solid darken($color, 10%);
-        border-width: 1px 1px 3px 1px;
-        border-width: 1px 1px 3px 1px;
+.#{$btn-name }{ background: $color;
+    border: solid darken($color, 10%);
+    border-width: 1px 1px 3px 1px;
+    border-width: 1px 1px 3px 1px;
 
-        @if (lightness($color) > 60)
-            { color: $color-base-text;} @else {
-                color: $color-light-link;}
-        }
+    @if (lightness($color) > 60)
+        { color: $color-base-text;} @else {
+            color: $color-light-link;}
+    }
 }
 
 //Box Colors__________________________________//
