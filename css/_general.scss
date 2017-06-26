@@ -75,3 +75,26 @@
 .page-content {
     padding-top: 1em;
 }
+
+//Trails Styles
+.trl-tag {
+  display: inline-block; 
+  font-size: 16px; 
+  padding: 0 10px; 
+  color: #fff;
+  background-color: $color-dark-grey;
+}
+.bg-blue {
+  background-color: $color-primary;
+}
+.bg-red {
+  background-color: $color-red;
+}
+.trl-link a {
+  text-decoration: none; 
+  display: block; 
+  font-size: 14px; 
+  border-bottom: 0; 
+  padding: 5px 0; 
+  line-height: 22px;
+}

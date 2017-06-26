@@ -28,8 +28,7 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-TileImage" content="<?php bloginfo('template_directory'); ?>/ico/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="//use.typekit.net/qmn1nmb.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Open+Sans:800" rel="stylesheet">
     <?php wp_head(); ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

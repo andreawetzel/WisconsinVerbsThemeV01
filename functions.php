@@ -2,12 +2,14 @@
 
 //Show template name -- comment out when not in use
 
-/*
-add_action('wp_head', 'show_template');
+/* 
+add_action('wp_footer', 'show_template');
 function show_template() {
 	global $template;
-	print_r($template);
+	print_r('<small><b>Template Page:</b> '.$template.'</small>');
 }*/
+
+
 
 
 //Load CSS
@@ -167,4 +169,20 @@ function wv_comments( $comment, $args, $depth ) {
 		break;
 	endswitch;
 }
-?>
+
+// Add support for template part shortcodes  
+// https://github.com/halfempty/template-part-shortcode
+// [template part="template-part-hello"] /parts/template-part-hello.php
+
+function template_part_shortcode( $atts ) {
+	extract( shortcode_atts( array(
+		'part' => '',
+	), $atts ) );
+	$file = locate_template('parts/' . $part . '.php');
+    ob_start();
+    include $file;
+    $template = ob_get_contents();
+    ob_end_clean();
+    return $template;
+}
+add_shortcode( 'template', 'template_part_shortcode' );
