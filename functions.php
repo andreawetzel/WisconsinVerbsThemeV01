@@ -171,8 +171,8 @@ function wv_comments( $comment, $args, $depth ) {
 }
 
 // Add support for template part shortcodes  
-// Thanks to https://github.com/halfempty/template-part-shortcode
-// Example: [template part="template-part-hello"] => /parts/template-part-hello.php
+// https://github.com/halfempty/template-part-shortcode
+// [template part="template-part-hello"] /parts/template-part-hello.php
 
 function template_part_shortcode( $atts ) {
 	extract( shortcode_atts( array(
@@ -191,71 +191,59 @@ add_shortcode( 'template', 'template_part_shortcode' );
 // Custom Post Types  
 // These could be moved to a Plugin
 
-if(!function_exists('wiverb_post_types')) {
-  /**
-   * Adds custom post types and taxonomies
-   */
-  function wiverb_post_types() {
-    global $wp_rewrite;
+/*
+* Hiking Trail listing 
+*/
+register_post_type( 'wiverb_hike',
+  array(
+    'labels' => array(
+      'name' => __( 'Hiking Trails' ),
+      'singular_name' => __( 'Hiking Trail' ),
+      'add_new_item' => __('Add New Trail'),
+      'edit_item' => __('Edit Trail'),
+      'new_item' => __('New trail'),
+      'view_item' => __('View trail'),
+      'search_items' => __('Search trails'),
+      'not_found' => __('No trails were found'),
+      'not_found_in_trash' => ('No trails found in trash')
+    ),
+    'public' => true,
+    'show_in_menu' => false,
+    'exclude_from_search' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
+    'rewrite' => array( 'slug' => 'trails/hiking' ),
+    'has_archive' => 'trails/hiking'
+  )
+);
 
-    /*
-    * Hiking Trail listing 
-    */
-    register_post_type( 'wiverb_hike',
-      array(
-        'labels' => array(
-          'name' => __( 'Hiking Trails' ),
-          'singular_name' => __( 'Hiking Trail' ),
-          'add_new_item' => __('Add New Trail'),
-          'edit_item' => __('Edit Trail'),
-          'new_item' => __('New trail'),
-          'view_item' => __('View trail'),
-          'search_items' => __('Search trails'),
-          'not_found' => __('No trails were found'),
-          'not_found_in_trash' => ('No trails found in trash')
-        ),
-        'public' => true,
-        'show_in_menu' => false,
-        'exclude_from_search' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
-        'rewrite' => array( 'slug' => 'trails/hiking' ),
-        'has_archive' => 'trails/hiking'
-      )
-    );
-    
-    /*
-    * Biking Trail listing 
-    */
-    register_post_type( 'wiverb_bike',
-      array(
-        'labels' => array(
-          'name' => __( 'Biking Trails' ),
-          'singular_name' => __( 'Biking Trail' ),
-          'add_new_item' => __('Add New Trail'),
-          'edit_item' => __('Edit Trail'),
-          'new_item' => __('New trail'),
-          'view_item' => __('View trail'),
-          'search_items' => __('Search trails'),
-          'not_found' => __('No trails were found'),
-          'not_found_in_trash' => ('No trails found in trash')
-        ),
-        'public' => true,
-        'show_in_menu' => false,
-        'exclude_from_search' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
-        'rewrite' => array( 'slug' => 'trails/biking' ),
-        'has_archive' => 'trails/biking'
-      )
-    );  
-  }
-  add_action( 'init', 'wiverb_post_types' );
-}
-
+/*
+* Biking Trail listing 
+*/
+register_post_type( 'wiverb_bike',
+  array(
+    'labels' => array(
+      'name' => __( 'Biking Trails' ),
+      'singular_name' => __( 'Biking Trail' ),
+      'add_new_item' => __('Add New Trail'),
+      'edit_item' => __('Edit Trail'),
+      'new_item' => __('New trail'),
+      'view_item' => __('View trail'),
+      'search_items' => __('Search trails'),
+      'not_found' => __('No trails were found'),
+      'not_found_in_trash' => ('No trails found in trash')
+    ),
+    'public' => true,
+    'show_in_menu' => false,
+    'exclude_from_search' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
+    'rewrite' => array( 'slug' => 'trails/biking' ),
+    'has_archive' => 'trails/biking'
+  )
+); 
 
 /*
 * Admin Controls
 */
-
 if(!function_exists('wiverbs_trails_menu')) {
   /**
    * Adds admin nav & subnav
@@ -269,7 +257,6 @@ if(!function_exists('wiverbs_trails_menu')) {
   }
   add_action( 'admin_menu', 'wiverbs_trails_menu' );
 }
-
 if(!function_exists('wiverbs_trails_page')) {
   /**
    * Add content to the admin trails top-level page
