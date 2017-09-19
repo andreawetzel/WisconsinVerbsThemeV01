@@ -8,6 +8,15 @@
           <div class="col-md-6">
             <h1>Bike Trail: <?php the_title(); ?></h1> 
             <?php the_content(); ?>
+            <?php 
+            
+            $trail_link = get_field('trail_link');
+
+            if ($trail_link) { 
+              echo ('<p><a href="' . $trail_link . '">' . $trail_link. '</a></p>');
+            }
+              
+            ?>
           </div>
           <div class="col-md-6">
             <?php
